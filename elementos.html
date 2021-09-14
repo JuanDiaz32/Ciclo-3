@@ -5,12 +5,31 @@
         <title>Elementos HTML</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f0/Icon-notepad.svg" type="image/x-icon">
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <!-- Formas de aplicar CSS:
+        1. Archivo externo .css (etiqueta link)
+        2. Etiqueta style (dentro de head)
+
+        Sintaxis de un bloque CSS:
+        selección{
+            atributo o característica: valor del atributo o característica;
+            atributo2 o característica2: valor del atributo2 o característica2;
+        }
+    
+        Importancia de selección:
+        4. Etiqueta o elemento
+        3. Clases o atributos
+        2. ID
+        1. Atributo style -->
+    
+    
     </head>
     <body>
         <!-- Contenido de la página web -->
         <header>
             <!-- Logo de la página -->
-            <h1>
+            <h1 class="fondo_naranja">
                 <a target="_blank" href="https://misiontic2022.unab.edu.co">
                 <img width="80px" src="https://misiontic2022.mintic.gov.co/mtv2/assets/assets/images/logo-mision.png"
                     alt="misiontic2022">
@@ -38,7 +57,7 @@
             <br/>
 
             <h2>Listas</h2>
-            <h3>Ordenadas</h3>
+            <h3 class="fondo_naranja">Ordenadas</h3>
             <ol type="a">
                 <li>Local</li>
                 <li>Nacional</li>
@@ -47,7 +66,7 @@
             <h3>Desordenadas</h3>
             <ul>
                 <li>Normal</li>
-                <li>Express</li>
+                <li class="fondo_naranja">Express</li>
                 <li>
                     <a href="otra.html">Ir a la otra página</a>
                 </li>
@@ -57,7 +76,7 @@
             </dt>
             <br/>
 
-            <h2>Enlaces</h2>
+            <h2 style="background-color: aqua; color: black; text-align: start;" class="fondo_naranja" id="titulo_enlaces">Enlaces</h2>
             <a target="_blank" href="https://misiontic2022.unab.edu.co">Ir a la página de MisiónTIC UNAB</a>
             <a href="otra.html">Ir a la otra página</a>
 
@@ -73,7 +92,7 @@
                     <tr>
                         <th>Cliente</th>
                         <th>Producto</th>
-                        <th>Cantidad</th>
+                        <th class="fondo_naranja">Cantidad</th>
                         <th>Total</th>
                     </tr>
                 </thead>
@@ -87,7 +106,7 @@
                     <tr>
                         <td>Memoria USB</td>
                         <td>10</td>
-                        <td>$700000</td>
+                        <td class="fondo_naranja">$700000</td>
                     </tr>
                     <tr>
                         <td>Maria</td>
@@ -145,7 +164,7 @@
                 <button type="reset">Resetear</button>
                 <br><br>
                 <input type="submit" value="enviar" value="Enviar">
-                <button type="submit">Enviar</button>
+                <button type="submit" class="fondo_naranja">Enviar</button>
             </form>
 
 
