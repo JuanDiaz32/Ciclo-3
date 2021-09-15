@@ -5,7 +5,48 @@
         <title>Elementos HTML</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f0/Icon-notepad.svg" type="image/x-icon">
-        <link rel="stylesheet" href="css/estilos.css">
+        <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            header{
+                border: 2px solid blue;
+            }
+
+            main{
+                border: 2px solid black;
+                width: 80%;
+                margin: 32px auto;
+                padding: 64px;
+                /* margin: 64px 32px 16px 8px; */
+                /* margin-top: 32px;
+                margin-left: auto;
+                margin-right: auto; */
+            }
+
+            main h3, main a, main img{
+                border: 2px solid green;
+                padding: 16px;
+            }
+
+            footer{
+                border: 2px solid yellow;
+            }
+
+            #Meta{
+                display: block;
+            }
+
+            h2{
+                display: inline;
+                
+            }
+
+        </style>
 
         <!-- Formas de aplicar CSS:
         1. Archivo externo .css (etiqueta link)
@@ -64,7 +105,7 @@
                 <li>Internacional</li>
             </ol>
             <h3>Desordenadas</h3>
-            <ul>
+            <ul id="desordenadas">
                 <li>Normal</li>
                 <li class="fondo_naranja">Express</li>
                 <li>
@@ -81,8 +122,8 @@
             <a href="otra.html">Ir a la otra página</a>
 
             <h2>Imágenes</h2>
-            <img height="156px" src="img/Flag_of_Meta.svg.png"
-                alt="Envío Local">
+            <img height="156px" src="img/Bandera_Meta.png"
+                alt="Envío Local" id="Meta">
             <img height="156px" src="https://encolombia.com/wp-content/uploads/2020/02/Colombia.jpg"
                 alt="Envío Nacional">
 
@@ -174,6 +215,7 @@
         <br/>
         <footer>
             <!-- Pie de página -->
+            <br><br><br><br><br><br>
         </footer>
     </body>
 </html>
