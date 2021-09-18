@@ -1,111 +1,85 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Información o configuración para el navegador -->
-        <title>Elementos HTML</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f0/Icon-notepad.svg" type="image/x-icon">
-        <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Compras</title>
 
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-
-            header{
-                border: 2px solid blue;
-            }
-
-            main{
-                border: 2px solid black;
-                width: 80%;
-                margin: 32px auto;
-                padding: 64px;
-                /* margin: 64px 32px 16px 8px; */
-                /* margin-top: 32px;
-                margin-left: auto;
-                margin-right: auto; */
-            }
-
-            main h3, main a, main img{
-                border: 2px solid green;
-                padding: 16px;
-            }
-
-            footer{
-                border: 2px solid yellow;
-            }
-
-            #Meta{
-                display: block;
-            }
-
-            h2{
-                display: inline;
-                
-            }
-
-        </style>
-
-        <!-- Formas de aplicar CSS:
-        1. Archivo externo .css (etiqueta link)
-        2. Etiqueta style (dentro de head)
-
-        Sintaxis de un bloque CSS:
-        selección{
-            atributo o característica: valor del atributo o característica;
-            atributo2 o característica2: valor del atributo2 o característica2;
+    <style>
+        body{
+            background-color: lightgrey;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 80px 40px 1fr 32px;
+            grid-auto-rows: 256px;
+            /* gap: 16px; */
+            height: 100vh;
         }
-    
-        Importancia de selección:
-        4. Etiqueta o elemento
-        3. Clases o atributos
-        2. ID
-        1. Atributo style -->
-    
-    
-    </head>
-    <body>
-        <!-- Contenido de la página web -->
-        <header>
-            <!-- Logo de la página -->
-            <h1 class="fondo_naranja">
-                <a target="_blank" href="https://misiontic2022.unab.edu.co">
-                <img width="80px" src="https://misiontic2022.mintic.gov.co/mtv2/assets/assets/images/logo-mision.png"
-                    alt="misiontic2022">
-                </a>
-                Página de Elementos HTML
-            </h1>
-            <nav>
-                <!-- Menús o iconos -->
-                <ul>
-                    <li>
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="otra.html">Otra</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <aside>
-            <!-- Menú lateral -->
-        </aside>
-        <main>
-            <!-- Contenido principal -->
+        header{
+            background-color: aqua;
+            grid-column: 1 / 3;
+            text-align: center;     
+        }
+        nav{
+            background-color: blueviolet;
+            grid-column: 1 / span 2;
+        }
+        nav li{
+            display: inline-block;
+        }
+        aside{
+            background-color: chocolate;
+            /* width: 600px;
+            display: inline-block; */
+        }
+        main{
+            background-color: crimson;
+            /* width: 100px;
+            display: inline-block; */
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        footer{
+            background-color: darkgreen;
+            grid-column: 1 / 3;
+            text-align: center;
+        }
 
-            <table>
-                
-            </table>
+        .formulario{
+            grid-column: 2 / 3;
+            grid-row: 1 / span 2;
+        }
+        .tablas table{
+            margin: auto;
+        }
+    </style>
 
-            <h2>Encabezados</h2>
-            <h1>Título</h1>
-            <h2>SubTítulo</h2>
-            <h3>Título 3</h3>
-            <br/>
-
-            <h2>Listas</h2>
+</head>
+<body>
+    <header>
+        <h1 class="fondo_naranja">
+            <a target="_blank" href="https://misiontic2022.unab.edu.co">
+            <img width="80px" src="https://misiontic2022.mintic.gov.co/mtv2/assets/assets/images/logo-mision.png"
+                alt="misiontic2022">
+            </a>
+            Página de Elementos HTML
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="otra.html">Otra</a>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <h2>Listas</h2>
             <h3 class="fondo_naranja">Ordenadas</h3>
             <ol type="a">
                 <li>Local</li>
@@ -120,21 +94,16 @@
                     <a href="otra.html">Ir a la otra página</a>
                 </li>
             </ul>
-            <dt> Glosario
-                <dd>Lenguaje de hipertexto de marcado</dd>
-            </dt>
-            <br/>
-
-            <h2 style="background-color: aqua; color: black; text-align: start;" class="fondo_naranja" id="titulo_enlaces">Enlaces</h2>
-            <a target="_blank" href="https://misiontic2022.unab.edu.co">Ir a la página de MisiónTIC UNAB</a>
-            <a href="otra.html">Ir a la otra página</a>
-
+    </aside>
+    <main>
+        <div class="imagenes">
             <h2>Imágenes</h2>
             <img height="156px" src="img/Bandera_Meta.png"
                 alt="Envío Local" id="Meta">
             <img height="156px" src="https://encolombia.com/wp-content/uploads/2020/02/Colombia.jpg"
                 alt="Envío Nacional">
-
+        </div>
+        <div class="tablas">
             <h2>Tablas</h2>
             <table border="1" width="50%">
                 <thead>
@@ -171,8 +140,8 @@
                     </tr>
                 </tfoot>
             </table>
-            <br>
-
+        </div>
+        <div class="formulario">
             <h2>Formularios</h2>
             <form action="#" method="post">
                 <label for="fecha">Fecha</label>
@@ -215,15 +184,8 @@
                 <input type="submit" value="enviar" value="Enviar">
                 <button type="submit" class="fondo_naranja">Enviar</button>
             </form>
-
-
-
-
-        </main>
-        <br/>
-        <footer>
-            <!-- Pie de página -->
-            <br><br><br><br><br><br>
-        </footer>
-    </body>
+        </div>
+    </main>
+    <footer>Pie de página</footer>
+</body>
 </html>
